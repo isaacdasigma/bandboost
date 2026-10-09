@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BandBoost Courses</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f1a;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.2);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#00d4ff;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 8%;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#00d4ff;
+}
+
+.hero p{
+    opacity:.8;
+    max-width:700px;
+    margin:auto;
+}
+
+.course-section{
+    padding:50px 8% 100px;
+}
+
+.course-section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.5rem;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.course-card{
+    background:#171728;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,212,255,.2);
+}
+
+.course-image{
+    height:180px;
+    background:linear-gradient(135deg,#00d4ff,#7b2cff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:4rem;
+}
+
+.course-content{
+    padding:25px;
+}
+
+.course-content h3{
+    color:#00d4ff;
+    margin-bottom:10px;
+}
+
+.course-content p{
+    opacity:.8;
+    margin-bottom:15px;
+}
+
+.level{
+    display:inline-block;
+    background:#00d4ff;
+    color:black;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.progress-bar{
+    width:100%;
+    background:#222;
+    height:10px;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+.progress{
+    height:100%;
+    background:#00d4ff;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:50px;
+    background:#00d4ff;
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    opacity:.85;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    background:#090912;
+    opacity:.8;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BandBoost</div>
+
+    <nav>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="community.html">Community</a>
+        <a href="studio.html">Studio</a>
+    </nav>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Explore Music <span>Courses</span></h1>
+
+    <p>
+        Learn instruments, music theory, singing, songwriting,
+        and production with step-by-step lessons and progress tracking.
+    </p>
+</section>
+
+<section class="course-section">
+
+    <h2>Popular Courses</h2>
+
+    <div class="grid">
+
+        <div class="course-card">
+            <div class="course-image">🎸</div>
+
+            <div class="course-content">
+                <span class="level">Beginner</span>
+                <h3>Guitar Fundamentals</h3>
+
+                <p>
+                    Learn chords, strumming patterns,
+                    rhythm, and your first songs.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width:35%;"></div>
+                </div>
+
+                <button class="btn">Continue Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image">🎹</div>
+
+            <div class="course-content">
+                <span class="level">Intermediate</span>
+                <h3>Piano Mastery</h3>
+
+                <p>
+                    Build finger speed, scales,
+                    chords, and popular melodies.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width:60%;"></div>
+                </div>
+
+                <button class="btn">Continue Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image">🎤</div>
+
+            <div class="course-content">
+                <span class="level">All Levels</span>
+                <h3>Vocal Training</h3>
+
+                <p>
+                    Improve pitch, breathing,
+                    tone control, and confidence.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width:20%;"></div>
+                </div>
+
+                <button class="btn">Continue Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image">🥁</div>
+
+            <div class="course-content">
+                <span class="level">Beginner</span>
+                <h3>Drum Basics</h3>
+
+                <p>
+                    Learn beats, timing,
+                    fills, and groove techniques.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width:50%;"></div>
+                </div>
+
+                <button class="btn">Continue Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image">🎼</div>
+
+            <div class="course-content">
+                <span class="level">Essential</span>
+                <h3>Music Theory</h3>
+
+                <p>
+                    Understand scales, key signatures,
+                    harmony, and songwriting.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width:75%;"></div>
+                </div>
+
+                <button class="btn">Continue Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image">🎧</div>
+
+            <div class="course-content">
+                <span class="level">Advanced</span>
+                <h3>Music Production</h3>
+
+                <p>
+                    Record, mix, edit,
+                    and publish professional tracks.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width:15%;"></div>
+                </div>
+
+                <button class="btn">Continue Course</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 BandBoost • Learn • Create • Perform
+</footer>
+
+</body>
+</html>
