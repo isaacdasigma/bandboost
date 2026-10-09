@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BandBoost - Learn Music The Fun Way</title>
+
+<!-- Google Fonts Import -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f1a;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.2);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#00d4ff;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    gap:50px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#00d4ff;
+}
+
+.hero-text p{
+    opacity:.8;
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:1rem;
+}
+
+.primary{
+    background:#00d4ff;
+    color:black;
+}
+
+.secondary{
+    background:transparent;
+    border:2px solid #00d4ff;
+    color:white;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.music-card{
+    width:350px;
+    height:350px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#00d4ff,#7b2cff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 40px rgba(0,212,255,.4);
+}
+
+.music-card img{
+    width:220px;
+    height:220px;
+    object-fit:contain;
+    image-rendering:pixelated;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+.features{
+    padding:100px 8%;
+}
+
+.features h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#171728;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00d4ff;
+}
+
+.cta{
+    text-align:center;
+    padding:100px 8%;
+}
+
+.cta h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+footer{
+    padding:40px;
+    text-align:center;
+    background:#090912;
+    opacity:.7;
+}
+
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:50px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BandBoost</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="community.html">Community</a>
+        <a href="studio.html">Studio</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Learn Music. <span>Create Music.</span> Share Music.</h1>
+
+        <p>
+            Master guitar, piano, drums, singing, and music theory with
+            interactive lessons, AI coaching, and a built-in recording studio.
+        </p>
+
+        <div class="buttons">
+            <button class="btn primary">Start Learning</button>
+            <button class="btn secondary">Watch Demo</button>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="music-card">
+            <img src="New Piskel.png" alt="BandBoost Music Logo">
+        </div>
+    </div>
+</section>
+
+<section id="courses" class="features">
+    <h2>Why Musicians Love BandBoost</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Guitar Lessons</h3>
+            <p>Learn chords, strumming, fingerpicking, and full songs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Piano Courses</h3>
+            <p>Interactive piano lessons for beginners to advanced players.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Music Coach</h3>
+            <p>Get personalized tips and instant feedback on your progress.</p>
+        </div>
+
+        <div class="card">
+            <h3>Vocal Training</h3>
+            <p>Practice pitch, breathing, and singing techniques.</p>
+        </div>
+
+        <div class="card">
+            <h3>Studio Recorder</h3>
+            <p>Create, edit, and share music right in your browser.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 XP & Leaderboards</h3>
+            <p>Level up, earn badges, and compete with musicians worldwide.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Start Your Music Journey Today</h2>
+    <p>Join thousands of musicians learning and creating together.</p>
+    <br>
+    <button class="btn primary">Get Started Free</button>
+</section>
+
+<footer>
+    © 2026 BandBoost. Learn • Create • Perform
+</footer>
+
+</body>
+</html>
