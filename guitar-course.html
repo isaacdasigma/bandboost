@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BandBoost | Guitar Fundamentals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f1a;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.2);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#00d4ff;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 8%;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:10px;
+}
+
+.hero span{
+    color:#00d4ff;
+}
+
+.hero p{
+    opacity:.8;
+}
+
+.progress-section{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+.progress-bar{
+    height:22px;
+    background:#171728;
+    border-radius:50px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#00d4ff,#7b2cff);
+    transition:.3s;
+}
+
+.modules{
+    padding:60px 8%;
+}
+
+.modules h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+.lesson{
+    background:#171728;
+    margin-bottom:20px;
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.lesson-info h3{
+    color:#00d4ff;
+    margin-bottom:5px;
+}
+
+.lesson button{
+    border:none;
+    padding:12px 20px;
+    border-radius:50px;
+    background:#00d4ff;
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.lesson button:hover{
+    opacity:.85;
+}
+
+.badge-box{
+    text-align:center;
+    padding:50px;
+}
+
+.badge{
+    display:inline-block;
+    background:#171728;
+    padding:20px 30px;
+    border-radius:20px;
+    font-size:1.2rem;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    background:#090912;
+    opacity:.8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.lesson{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">BandBoost</div>
+
+<nav>
+    index.htmlHome</a>
+    <a href="courses.html">Courses</a>
+    <a href="community.html">Community</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>🎸 Guitar <span>Fundamentals</span></h1>
+
+<p>
+Master the basics of guitar and start playing real songs.
+</p>
+
+</section>
+
+<section class="progress-section">
+
+<h2>Your Progress</h2>
+
+<div class="progress-bar">
+    <div class="progress" id="progressBar"></div>
+</div>
+
+<p id="progressText">0 / 6 Lessons Completed</p>
+
+</section>
+
+<section class="modules">
+
+<h2>Course Modules</h2>
+
+<div class="lesson">
+    <div class="lesson-info">
+        <h3>Lesson 1 - Parts of a Guitar</h3>
+        <p>Learn the names and purpose of each guitar part.</p>
+    </div>
+
+    <button onclick="completeLesson(0)">
+        Complete
+    </button>
+</div>
+
+<div class="lesson">
+    <div class="lesson-info">
+        <h3>Lesson 2 - Tuning Your Guitar</h3>
+        <p>Get your guitar sounding perfect.</p>
+    </div>
+
+    <button onclick="completeLesson(1)">
+        Complete
+    </button>
+</div>
+
+<div class="lesson">
+    <div class="lesson-info">
+        <h3>Lesson 3 - First Chords</h3>
+        <p>Learn C, G, D, Em and Am.</p>
+    </div>
+
+    <button onclick="completeLesson(2)">
+        Complete
+    </button>
+</div>
+
+<div class="lesson">
+    <div class="lesson-info">
+        <h3>Lesson 4 - Strumming Patterns</h3>
+        <p>Build rhythm and timing skills.</p>
+    </div>
+
+    <button onclick="completeLesson(3)">
+        Complete
+    </button>
+</div>
+
+<div class="lesson">
+    <div class="lesson-info">
+        <h3>Lesson 5 - Playing Your First Song</h3>
+        <p>Combine chords and rhythm.</p>
+    </div>
+
+    <button onclick="completeLesson(4)">
+        Complete
+    </button>
+</div>
+
+<div class="lesson">
+    <div class="lesson-info">
+        <h3>Lesson 6 - Barre Chords</h3>
+        <p>Unlock advanced chord shapes.</p>
+    </div>
+
+    <button onclick="completeLesson(5)">
+        Complete
+    </button>
+</div>
+
+</section>
+
+<section class="badge-box">
+
+<div class="badge" id="certificate">
+🏆 Complete all lessons to earn your Guitar Fundamentals Certificate!
+</div>
+
+</section>
+
+<footer>
+© 2026 BandBoost • Learn • Create • Perform
+</footer>
+
+<script>
+
+const TOTAL_LESSONS = 6;
+
+let completed =
+JSON.parse(localStorage.getItem("guitarProgress"))
+|| [];
+
+updateProgress();
+
+function completeLesson(index){
+
+    if(!completed.includes(index)){
+        completed.push(index);
+
+        localStorage.setItem(
+            "guitarProgress",
+            JSON.stringify(completed)
+        );
+
+        updateProgress();
+    }
+}
+
+function updateProgress(){
+
+    const percent =
+    (completed.length / TOTAL_LESSONS) * 100;
+
+    document.getElementById("progressBar")
+    .style.width = percent + "%";
+
+    document.getElementById("progressText")
+    .textContent =
+    `${completed.length} / ${TOTAL_LESSONS} Lessons Completed`;
+
+    if(completed.length === TOTAL_LESSONS){
+
+        document.getElementById("certificate")
+        .innerHTML =
+        "🎉 Congratulations! You earned the Guitar Fundamentals Certificate!";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
